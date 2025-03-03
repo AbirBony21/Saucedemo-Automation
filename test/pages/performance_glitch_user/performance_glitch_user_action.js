@@ -4,45 +4,45 @@ const utility=require("../../utilities/utility");
 class Action{
     async clickOnUserInputField(username){
         await performance_glitch_user_locators.user_name.setValue(username);
-        await browser.pause(3000);
+        await browser.pause(2000);
 
     }
 
     async clickOnPasswordInputField(password){
         await performance_glitch_user_locators.password.setValue(password);
-        await browser.pause(3000);
+        await browser.pause(2000);
 
     }
 
     async clickOnLoginButton(){
         await performance_glitch_user_locators.login_button.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
 
     }
     
     async clickOnhamburgerButton(){
         await performance_glitch_user_locators.clickOnHamburger_menu.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
     async clickOnresetAppState(){
         await performance_glitch_user_locators.clickOnResetAppState.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
 
     async clickOnCrossButton(){
         await performance_glitch_user_locators.clickOnCrossButton.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
 
     async clickOnFilter(){
         await performance_glitch_user_locators.clickOnFilter.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
     
 
     async clickOnOption(){
         await performance_glitch_user_locators.clickOnOption.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
 
     async addToCart(){
@@ -68,18 +68,18 @@ class Action{
 
         }
         console.log(selectedProductNames);
-        await browser.pause(3000);
+        await browser.pause(2000);
         return selectedProductNames;
     }
 
     async clickOnShoppingCart(){
         await performance_glitch_user_locators.clickOnShoppingButton.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
 
     async clickOnCheckout(){
         await performance_glitch_user_locators.clickOnCheckOutButton.click();
-        await browser.pause(3000);
+        await browser.pause(2000);
     }
 
     async CartItem_productName(){
