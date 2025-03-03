@@ -158,9 +158,9 @@ Modify the `scripts` section in `package.json`:
 ## Test Execution
 ### Run All Tests
 ```sh
-npm test
+npm run test
 ```
-Or run specific Test Sceneario by commenting/uncommenting in **spec** section in **wdio.conf.js** file then use command **"npm test"** in the terminal.
+Or run specific Test Sceneario by commenting/uncommenting in **spec** section in **wdio.conf.js** file then use command **"npm run test"** in the terminal.
 ```js
 specs: [
          locked_out_user,
@@ -169,12 +169,28 @@ specs: [
         // './test/specs/**/*.js'
     ],
 ```
+For './test/specs/**/*.js' make sure that "maxInstances" is set to 3 or more so that all three test scenarios can run in different windows at the same time.
+
+```js
+maxInstances: 10,
+```
+
 
 ### Run Purchase Suite
+In **suite** section in **wdio.conf.js** file
+```js
+suites :{ 
+        purchase:[ locked_out_user, standard_user, performance_glitch_user]
+
+    },
+```
+and then in terminal,
 ```sh
 npm run purchase
 ```
-Purchase suite contains all test scenarios: `locked_out_user`, `standard_user`, `performance_glitch_user`.
+Purchase suite contains all test scenarios: `locked_out_user`, `standard_user`, `performance_glitch_user`. The three scenarios will run altogether in a sequential way.
+
+Make sure that in **wdio.conf.js** file, "maxInstances: 1"
 
 ### Generate and View Allure Report
 ```sh
