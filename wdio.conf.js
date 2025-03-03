@@ -24,14 +24,14 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        // locked_out_user,
+        //  locked_out_user,
         // standard_user,
         // performance_glitch_user
-        // './test/specs/**/*.js'
+        './test/specs/**/*.js'
     ],
 
     suites :{ 
-        purchase:[ [locked_out_user], [standard_user], [performance_glitch_user]]
+        purchase:[ locked_out_user, standard_user, performance_glitch_user]
 
     },
 
@@ -55,7 +55,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
